@@ -28,7 +28,9 @@ class ExportService {
 
   static Future<void> shareFile(String path) async {
     final file = XFile(path);
-    await Share.shareXFiles([file], text: 'Exportación de datos');
+    await SharePlus.instance.share(
+      ShareParams(files: [file], text: 'Exportación de datos'),
+    );
   }
 
   static void _writeRow(Sheet sheet, int rowIndex, List<CellValue?> values) {

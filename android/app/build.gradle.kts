@@ -62,7 +62,8 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android.play:core:1.10.3")
+    implementation("com.google.android.play:app-update:2.1.0")
+    implementation("com.google.android.play:review:2.0.2")
 }
 
 flutter {
